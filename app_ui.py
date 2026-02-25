@@ -41,7 +41,9 @@ html, body, [data-testid="stAppViewContainer"], [data-testid="stMain"],
 
 /* ── HERO ── */
 .hero-wrap {
-    padding-top: 84px;   /* gives breathing room like screenshot */
+    text-align: center;
+    padding: 56px 0 32px;   /* 🔑 reduced top + bottom */
+    position: relative;
 }
 .hero-logo {
     width: 52px; height: 52px;
@@ -136,6 +138,18 @@ html, body, [data-testid="stAppViewContainer"], [data-testid="stMain"],
     color: rgba(255,255,255,0.55);
     line-height: 1.6;
     font-weight: 400;
+}
+/* ── FIRST-FOLD COMPRESSION ── */
+.cards-row {
+    margin: 28px 0 24px;   /* was too tall */
+}
+
+.tabs-wrap {
+    margin: 20px 0 18px;
+}
+
+.status-badge {
+    margin-bottom: 22px;
 }
 
 /* ── TABS (REFERENCE STYLE) ── */
@@ -243,6 +257,9 @@ html, body, [data-testid="stAppViewContainer"], [data-testid="stMain"],
 @keyframes pulse-dot {
     0%, 100% { opacity: 1; transform: scale(1); }
     50% { opacity: 0.5; transform: scale(0.8); }
+}
+.home-input-wrap {
+    margin-top: -12px;   /* 🔑 pulls input upward */
 }
 
 /* ── CHAT MESSAGES ── */
@@ -398,6 +415,8 @@ if st.session_state.phase == "home":
     """, unsafe_allow_html=True)
 
     # URL Input
+    st.markdown('<div class="home-input-wrap">', unsafe_allow_html=True)
+
     col1, col2 = st.columns([5, 1])
     with col1:
         url = st.text_input(
@@ -427,7 +446,7 @@ if st.session_state.phase == "home":
         </div>
         """, unsafe_allow_html=True)
 
-
+st.markdown('</div>', unsafe_allow_html=True)
 # ════════════════════════════════════════════════════════════════════════════
 # CHAT SCREEN
 # ════════════════════════════════════════════════════════════════════════════
