@@ -64,22 +64,23 @@ html, body, [data-testid="stAppViewContainer"], [data-testid="stMain"],
 }
 .hero-title {
     font-family: 'Syne', sans-serif !important;
-    font-size: clamp(2.4rem, 5vw, 3.6rem) !important;
+    font-size: clamp(2.8rem, 6vw, 4.2rem) !important;
     font-weight: 800 !important;
     letter-spacing: -0.03em;
-    line-height: 1.1;
-    color: #f0f0f0 !important;
-    margin-bottom: 16px;
+    line-height: 1.05;
+    color: #ffffff !important;
 }
-.hero-title span { color: #22c55e; }
+
+.hero-title span {
+    color: #22c55e;
+}
 .hero-sub {
     font-size: 1rem;
-    color: #6b7280;
-    font-weight: 300;
-    max-width: 460px;
-    margin: 0 auto;
+    color: rgba(255,255,255,0.55);
+    font-weight: 400;
+    max-width: 520px;
+    margin: 16px auto 0;
     line-height: 1.7;
-    font-style: italic;
 }
 
 /* ── CARDS ── */
@@ -125,100 +126,93 @@ html, body, [data-testid="stAppViewContainer"], [data-testid="stMain"],
 }
 .card-title {
     font-family: 'Syne', sans-serif;
-    font-size: 0.88rem;
+    font-size: 0.95rem;
     font-weight: 600;
-    color: #e2e8f0;
-    margin-bottom: 7px;
-    letter-spacing: -0.01em;
+    color: #ffffff;
+    margin-bottom: 8px;
 }
 .card-desc {
-    font-size: 0.78rem;
-    color: #4b5563;
-    line-height: 1.55;
-    font-weight: 300;
+    font-size: 0.82rem;
+    color: rgba(255,255,255,0.55);
+    line-height: 1.6;
+    font-weight: 400;
 }
 
-/* ── TABS ── */
+/* ── TABS (REFERENCE STYLE) ── */
 .tabs-wrap {
     display: flex;
-    gap: 4px;
-    margin-bottom: 28px;
-    border-bottom: 1px solid rgba(255,255,255,0.06);
-    padding-bottom: 0;
+    gap: 20px;
+    justify-content: center;
+    margin: 28px 0 34px;
+    border-bottom: none;
 }
 .tab-btn {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 0.83rem;
-    font-weight: 400;
-    color: #4b5563;
-    padding: 8px 16px 12px;
+    font-size: 0.85rem;
+    color: #6b7280;
     background: none;
     border: none;
+    padding: 0 2px 6px;
     cursor: pointer;
     border-bottom: 2px solid transparent;
-    margin-bottom: -1px;
-    transition: all 0.2s;
-    letter-spacing: 0.01em;
+    transition: all 0.2s ease;
 }
 .tab-btn.active {
     color: #22c55e;
     border-bottom-color: #22c55e;
     font-weight: 500;
 }
-.tab-btn:hover:not(.active) { color: #9ca3af; }
+.tab-btn:hover:not(.active) {
+    color: #d1d5db;
+}
 
-/* ── INPUT AREA ── */
+/* ── CHATGPT-STYLE INPUT ── */
 .input-outer {
     position: fixed;
-    bottom: 0; left: 0; right: 0;
-    background: linear-gradient(to top, #0a0a0a 60%, transparent);
-    padding: 24px 24px 32px;
-    z-index: 100;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background: linear-gradient(to top, #0a0a0a 65%, transparent);
 }
 .input-inner {
-    max-width: 820px;
+    max-width: 860px;
     margin: 0 auto;
     position: relative;
 }
 .input-box {
     width: 100%;
-    background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(255,255,255,0.1);
-    border-radius: 16px;
-    padding: 18px 64px 18px 56px;
-    font-family: 'DM Sans', sans-serif;
+    background: #ffffff;
+    color: #111827;
+    border-radius: 999px;
+    border: none;
+    padding: 16px 56px 16px 48px;
     font-size: 0.95rem;
-    color: #e2e8f0;
     outline: none;
-    transition: all 0.2s;
-    backdrop-filter: blur(12px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.35);
 }
-.input-box:focus {
-    border-color: rgba(34,197,94,0.4);
-    background: rgba(255,255,255,0.07);
-    box-shadow: 0 0 0 3px rgba(34,197,94,0.08), 0 8px 32px rgba(0,0,0,0.4);
+.input-box::placeholder {
+    color: #9ca3af;
 }
-.input-box::placeholder { color: #374151; }
 .input-left-icon {
-    position: absolute; left: 18px; top: 50%;
+    position: absolute;
+    left: 18px;
+    top: 50%;
     transform: translateY(-50%);
-    font-size: 18px; color: #374151;
+    color: #9ca3af;
 }
 .input-send-btn {
-    position: absolute; right: 10px; top: 50%;
+    position: absolute;
+    right: 8px;
+    top: 50%;
     transform: translateY(-50%);
-    width: 38px; height: 38px;
-    background: linear-gradient(135deg, #22c55e, #16a34a);
-    border: none; border-radius: 10px;
-    cursor: pointer;
-    display: flex; align-items: center; justify-content: center;
+    width: 38px;
+    height: 38px;
+    background: #22c55e;
+    border-radius: 50%;
+    border: none;
+    color: white;
     font-size: 16px;
-    transition: all 0.2s;
-    box-shadow: 0 4px 12px rgba(34,197,94,0.3);
-}
-.input-send-btn:hover {
-    transform: translateY(-50%) scale(1.05);
-    box-shadow: 0 6px 20px rgba(34,197,94,0.4);
+    cursor: pointer;
 }
 
 /* ── STATUS BADGE ── */
@@ -394,12 +388,13 @@ if st.session_state.phase == "home":
     # Tabs (decorative for now)
     st.markdown("""
     <div class="tabs-wrap">
-        <button class="tab-btn active">All</button>
-        <button class="tab-btn">Review Only</button>
-        <button class="tab-btn">Rewrite Only</button>
-        <button class="tab-btn">SEO Audit</button>
-        <button class="tab-btn">Scorecard</button>
-    </div>
+    <button class="tab-btn active">All</button>
+    <button class="tab-btn">Text</button>
+    <button class="tab-btn">Image</button>
+    <button class="tab-btn">Video</button>
+    <button class="tab-btn">Music</button>
+    <button class="tab-btn">Analytics</button>
+</div>
     """, unsafe_allow_html=True)
 
     # URL Input
