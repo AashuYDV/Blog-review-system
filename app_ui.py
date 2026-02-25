@@ -402,18 +402,6 @@ if st.session_state.phase == "home":
     </div>
     """, unsafe_allow_html=True)
 
-    # Tabs (decorative for now)
-    st.markdown("""
-    <div class="tabs-wrap">
-    <button class="tab-btn active">All</button>
-    <button class="tab-btn">Text</button>
-    <button class="tab-btn">Image</button>
-    <button class="tab-btn">Video</button>
-    <button class="tab-btn">Music</button>
-    <button class="tab-btn">Analytics</button>
-</div>
-    """, unsafe_allow_html=True)
-
     # URL Input
     st.markdown('<div class="home-input-wrap">', unsafe_allow_html=True)
 
