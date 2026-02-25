@@ -446,7 +446,7 @@ if st.session_state.phase == "home":
         </div>
         """, unsafe_allow_html=True)
 
-st.markdown('</div>', unsafe_allow_html=True)
+
 # ════════════════════════════════════════════════════════════════════════════
 # CHAT SCREEN
 # ════════════════════════════════════════════════════════════════════════════
@@ -471,7 +471,7 @@ else:
     </div>
     <div class="section-divider"></div>
     """, unsafe_allow_html=True)
-
+st.markdown('</div>', unsafe_allow_html=True)
     # Doc URL pill
     if st.session_state.doc_url:
         short_url = st.session_state.doc_url[:55] + "..." if len(st.session_state.doc_url) > 55 else st.session_state.doc_url
