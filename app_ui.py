@@ -41,9 +41,7 @@ html, body, [data-testid="stAppViewContainer"], [data-testid="stMain"],
 
 /* ── HERO ── */
 .hero-wrap {
-    text-align: center;
-    padding: 72px 0 48px;
-    position: relative;
+    padding-top: 84px;   /* gives breathing room like screenshot */
 }
 .hero-logo {
     width: 52px; height: 52px;
@@ -64,15 +62,17 @@ html, body, [data-testid="stAppViewContainer"], [data-testid="stMain"],
 }
 .hero-title {
     font-family: 'Syne', sans-serif !important;
-    font-size: clamp(2.8rem, 6vw, 4.2rem) !important;
-    font-weight: 800 !important;
-    letter-spacing: -0.03em;
-    line-height: 1.05;
+    font-size: clamp(2.9rem, 6vw, 4.1rem) !important;
+    font-weight: 650 !important;   /* 🔑 this is the key */
+    letter-spacing: -0.015em;      /* less tight */
+    line-height: 1.15;             /* more airy */
     color: #ffffff !important;
+    margin-bottom: 18px;
 }
 
 .hero-title span {
     color: #22c55e;
+    font-weight: 650;
 }
 .hero-sub {
     font-size: 1rem;
